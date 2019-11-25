@@ -1,0 +1,20 @@
+package com.ustglobal.webapp.servelets;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.*;
+
+public class RedirectServlet extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		String search = req.getParameter("search");
+		
+		
+		resp.sendRedirect("https://www.google.com/search?q="+search);
+	
+	}
+	
+}

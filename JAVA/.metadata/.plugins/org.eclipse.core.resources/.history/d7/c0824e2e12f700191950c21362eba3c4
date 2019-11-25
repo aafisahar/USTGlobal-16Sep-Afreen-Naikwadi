@@ -1,0 +1,14 @@
+package com.ustglobal.beanobject;
+
+public class TestA {
+	public static void main(String[] args) {
+
+		Student s = new Student();
+		s.setId(4);
+		s.setName("Afreen");
+		s.setRollno(50);
+
+		Database db = new Database();
+		db.receive(s);
+	}
+}

@@ -1,0 +1,17 @@
+package com.ustglobal.beanobject;
+
+public class TestB {
+    
+	public static void main(String[] args) {
+		Employee e = new Employee();
+		e.setEid(44);
+		e.setName("Afreen");
+		e.setSalary(400000);
+		e.setDept("Developement");
+		e.setDesignation("Java Full Stack Developer");
+		
+		Database2 db = new Database2();
+		db.receive(e);
+	}
+	
+}

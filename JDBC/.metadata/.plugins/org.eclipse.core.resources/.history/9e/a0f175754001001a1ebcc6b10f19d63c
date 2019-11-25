@@ -1,0 +1,9 @@
+package com.ustglobal.filehandling;
+
+public class FileReadingClass {
+
+	public static void main(String[] args) {
+		String path = "C:\\Users\\Abdullah\\Desktop\\text.txt";
+		
+	}
+}

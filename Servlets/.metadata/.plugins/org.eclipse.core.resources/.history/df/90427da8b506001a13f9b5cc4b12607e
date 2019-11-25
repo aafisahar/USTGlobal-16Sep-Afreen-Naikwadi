@@ -1,0 +1,7 @@
+package com.ustglobal.webapp.servelets;
+
+import javax.servlet.http.HttpServlet;
+
+public class SelectEmployeeDetails extends HttpServlet {
+
+}

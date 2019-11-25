@@ -1,0 +1,13 @@
+package com.ustglobal.thread.pausing;
+
+public class TestA {
+
+	Object o1 = new Object();
+	Object o2 = new Object();
+	
+	Runnable r1 = () -> {
+		synchronized (o1) {
+			System.out.println("T1 started");
+		}
+	}
+}
