@@ -1,0 +1,55 @@
+package com.ustglobal.beanobject;
+
+public class Employee {
+   
+	private int eid;
+	private String name;
+	private int salary;
+	private String dept;
+	private String designation;
+	
+	public Employee() {
+
+	}
+	
+	public void setId(int eid) {
+		this.eid = eid;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+	
+	public void setDept(String dept) {
+		this.dept = dept;
+	}
+	
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
+	
+	public int getId() {
+		return eid;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	public int getSalary() {
+		return salary;
+	}
+	
+	public String getDept() {
+		return dept;
+	}
+	
+	public String getDesignation() {
+		return designation;
+	}
+
+}
