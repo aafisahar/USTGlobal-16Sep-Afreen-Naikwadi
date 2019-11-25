@@ -1,5 +1,0 @@
-package com.ustglobal.empwebapp.dao;
-
-public class EmployeeDAOJdbcImpl {
-
-}
