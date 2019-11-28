@@ -1,0 +1,12 @@
+package com.ustglobal.jpawithhibernateapp.jpql;
+
+import javax.persistence.*;
+
+public class SelectAll {
+
+	public static void main(String[] args) {
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("TestPersistence");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		
+	}
+}

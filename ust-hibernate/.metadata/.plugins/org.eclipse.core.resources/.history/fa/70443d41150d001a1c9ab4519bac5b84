@@ -1,0 +1,18 @@
+package com.ustglobal.jpawithhibernateapp.manytomany;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="studentInfo")
+public class Student {
+
+	@Column
+	@Id
+	private int sid;
+	
+	@Column
+	private String sname;
+	
+	
+	
+}

@@ -1,0 +1,22 @@
+package com.ustglobal.jpawithhibernateapp.onetomany;
+
+import javax.persistence.*;
+
+import lombok.Data;
+
+@Entity
+@Table(name="pencil")
+@Data
+public class Pencil {
+
+	@Column
+	@Id
+	private int pid;
+	
+	@Column
+	private String color;
+	
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name="bid")
+	private PencilBox pencilBox; 
+}

@@ -1,0 +1,5 @@
+package com.ustglobal.jpawithhibernatestudentapp.dto;
+
+public class Student {
+
+}

@@ -1,0 +1,18 @@
+package com.ustglobal.jpawithhibernateapp.onetoone;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="person")
+
+public class Person {
+
+	@Column
+	@Id
+	private int pid;
+	
+	@Column
+	private String pname;
+
+	
+}

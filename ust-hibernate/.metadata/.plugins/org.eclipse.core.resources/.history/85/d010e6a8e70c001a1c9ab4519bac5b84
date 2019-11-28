@@ -1,0 +1,25 @@
+package com.ustglobal.jpawithhibernateapp;
+
+import javax.persistence.*;
+
+public class TestOneToOne {
+
+	public static void main(String[] args) {
+		EntityManager entityManager = null;
+		EntityTransaction entityTransaction = null;
+		
+		try {
+			EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("TestPersistence");
+			entityManager = entityManagerFactory.createEntityManager();
+			entityTransaction = entityManager.getTransaction();
+			entityTransaction.begin();
+			entityManager.persist();
+			System.out.println("Record Saved");
+			entityTransaction.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			entityTransaction.rollback();
+		}
+		entityManager.close();
+	}
+}
