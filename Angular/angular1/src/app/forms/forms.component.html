@@ -1,0 +1,200 @@
+<form action="" class="col-md-4 offset-4 mt-5 mb-5 card card-body" #form="ngForm" (onSubmit)="loginData(form)">
+    <h1 class="text-center bg-dark text-white">Form 1</h1>
+    <div class="form-group">
+        <input type="text" name="name" id="name" class="form-control" placeholder="Company Name" #name="ngModel" ngModel required>
+        <div *ngIf="name.touched && name.invalid">
+            <p class="alert alert-danger" *ngIf="name.errors.required">*this feild is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <select class="form-control" name="skill" id="skill" placeholder="Skills" #skill="ngModel" ngModel required>
+            <option>Skills</option>
+            <option>Java</option>
+            <option>SQL</option>
+            <option>J2EE</option>
+            <option>Angular</option>
+          </select>
+          <div *ngIf="skill.touched && skill.invalid">
+                <p class="alert alert-danger" *ngIf="skill.errors.required">*this feild is required</p>
+            </div>
+    </div>
+    <div class="form-group">
+        <input type="text" name="yoe" id="yoe" class="form-control" placeholder="Year of Exp" #yoe="ngModel" ngModel required>
+        <div *ngIf="yoe.touched && yoe.invalid">
+                <p class="alert alert-danger" *ngIf="yoe.errors.required">*this feild is required</p>
+            </div>
+    </div>
+    <div class="form-group">
+        <input type="text" name="mctc" id="mctc" class="form-control" placeholder="MCTC" #mctc="ngModel" ngModel required>
+        <div *ngIf="mctc.touched && mctc.invalid">
+            <p class="alert alert-danger" *ngIf="mctc.errors.required">*this feild is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="text" name="location" id="location" class="form-control" placeholder="Location" #location="ngModel" ngModel required>
+        <div *ngIf="location.touched && location.invalid">
+            <p class="alert alert-danger" *ngIf="location.errors.required">*this feild is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">Add Request</button>
+    </div>
+</form>
+<br><br><br>
+<form action="" class="col-md-4 offset-4 mt-5 card card-body" #forms="ngForm" (ngSubmit) = "details(form)">
+        <h1 class="text-center bg-dark text-white">Form 2</h1>
+      <div class="form-groups">
+          <input type="text" name="name" id="name" class="form-control" placeholder="Enter username ..." 
+          #name = "ngModel" ngModel required>
+      </div>
+          <div *ngIf = "name.touched && name.invalid">
+           <p class="alert alert-danger" *ngIf = "name.errors.required">this field is required</p>
+          </div>
+          <div class="form-groups">
+              <input type="digit" name="age" id="age" class="form-control" placeholder="Enter age..." 
+              #age = "ngModel" ngModel required>
+            </div>
+            <div *ngIf = "age.touched && age.invalid">
+              <p class="alert alert-danger" *ngIf = "age.errors.required">this field is required</p>
+           </div>
+           <div class="form-groups">
+              <label>Gender</label><br>
+             <label for="">Male</label>&nbsp;&nbsp;
+             <input type="radio" name="gender" id="male" required #gender = "ngModel" ngModel>&nbsp;&nbsp;
+             <label for="">Female</label>&nbsp;&nbsp;
+             <input type="radio" name="gender" id="female">&nbsp;&nbsp;
+             <label for="">Other</label>&nbsp;&nbsp;
+             <input type="radio" name="gender" id="other">
+             </div>
+             <div *ngIf = "gender.touched && gender.invalid">
+                <p class="alert alert-danger" *ngIf = "gender.errors.required">this field is required</p>
+             </div>
+             <div class="form-groups">
+                <input type="email" name="emails" id="emails" class="form-control" placeholder="Enter Email..." 
+                #emails = "ngModel" ngModel required>
+              </div>  
+                <div *ngIf = "emails.touched && emails.invalid">
+                 <p class="alert alert-danger" *ngIf = "email.errors.required">this field is required</p>
+                </div>
+                <div class="form-groups">
+                    <input type="tel" name="contact" id="contact" class="form-control" placeholder="Enter contact number..." 
+                    #cnum = "ngModel" ngModel required>
+                  </div>  
+                    <div *ngIf = "cnum.touched && cnum.invalid">
+                     <p class="alert alert-danger" *ngIf = "cnum.errors.required">this field is required</p>
+                    </div>
+                <div class="form-groups">
+                  <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password..." 
+                  #password = "ngModel" ngModel required>
+                </div>
+                <div *ngIf = "password.touched && password.invalid">
+                   <p class="alert alert-danger" *ngIf = "password.errors.required">this field is required</p>
+                </div>
+                <div class="form-groups">
+                    <input type="password" name="confirm password" id="confirm password" class="form-control" placeholder="Confirm Password..." 
+                    #password = "ngModel" ngModel required>
+                  </div>
+                  <div *ngIf = "password.touched && password.invalid">
+                     <p class="alert alert-danger" *ngIf = "password.errors.required">this field is required</p>
+                  </div>
+      <div class="form-groups">
+          <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">Add User</button>
+      </div>
+    </form>
+    <br><br><br>
+
+    <form action="" class="col-md-4 offset-4 mt-5 card card-body" #form2="ngForm" (ngSubmit) = "submitData(form)">
+        <h1 class="text-center bg-dark text-white">Form 3</h1>
+      <div class="form-group">
+          <input type="text" name="name" id="name" class="form-control" placeholder="Enter Candidate name ..." 
+          #candidate = "ngModel" ngModel required>
+          <div *ngIf = "candidate.touched && candidate.invalid">
+           <p class="alert alert-danger" *ngIf = "candidate.errors.required">this field is required</p>
+          </div>
+        </div>  
+        <div class="form-groupss">
+          <input type="number" name="yoe" id="yoe" class="form-control" placeholder="Enter experience..." 
+          #experience = "ngModel" ngModel required>
+        </div>
+        <div *ngIf = "experience.touched && experience.invalid">
+          <p class="alert alert-danger" *ngIf = "experience.errors.required">this field is required</p>
+       </div>
+       <div class="form-groupss">
+        <label>Skills</label><br>
+       <label for="">JAVA</label>&nbsp;&nbsp;
+       <input type="radio" name="skill" id="skill" required #skill = "ngModel" ngModel>&nbsp;&nbsp;
+       <label for="">SQL</label>&nbsp;&nbsp;
+       <input type="radio" name="skill" id="skill">&nbsp;&nbsp;
+       <label for="">Angular</label>&nbsp;&nbsp;
+       <input type="radio" name="skill" id="skill">
+       </div>
+       <div *ngIf = "skill.touched && skill.invalid">
+          <p class="alert alert-danger" *ngIf = "skill.errors.required">this field is required</p>
+       </div>
+       <div class="form-groupss">
+        <input type="text" name="cctc" id="cctc" class="form-control" placeholder="Enter CCTC..." 
+        #cctc = "ngModel" ngModel required>
+      </div>
+      <div *ngIf = "cctc.touched && cctc.invalid">
+        <p class="alert alert-danger" *ngIf = "cctc.errors.required">this field is required</p>
+     </div>
+     <div class="form-groupss">
+        <input type="text" name="ectc" id="ectc" class="form-control" placeholder="Enter ECTC..." 
+        #ectc = "ngModel" ngModel required>
+      </div>
+      <div *ngIf = "ectc.touched && ectc.invalid">
+        <p class="alert alert-danger" *ngIf = "ectc.errors.required">this field is required</p>
+     </div>
+     <div class="form-groupss">
+        <input type="text" name="rloc" id="rloc" class="form-control" placeholder="Ready to relocate..." 
+        #rloc = "ngModel" ngModel required>
+      </div>
+      <div *ngIf = "rloc.touched && rloc.invalid">
+        <p class="alert alert-danger" *ngIf = "rloc.errors.required">this field is required</p>
+     </div>
+      <div class="form-groupss">
+          <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">Schedule Interview</button>
+      </div>
+    </form>
+    <br><br><br>
+    <form action="" class="col-md-4 offset-4 mt-5 mb-5 card card-body" #form3="ngForm" (ngSubmit) = "requestData(form)">
+        <h1 class="text-center bg-dark text-white">Form 4</h1>
+      <div class="form-groupsss">
+          <input type="text" name="name" id="name" class="form-control" placeholder="Enter product name ..." 
+          #product = "ngModel" ngModel required>
+          <div *ngIf = "product.touched && product.invalid">
+           <p class="alert alert-danger" *ngIf = "product.errors.required">this field is required</p>
+          </div>
+        </div>  
+          <div class="form-groupsss">
+            <input type="digit" name="price" id="price" class="form-control" placeholder="Enter Price..." 
+            #price = "ngModel" ngModel required>
+          </div>
+          <div *ngIf = "price.touched && price.invalid">
+             <p class="alert alert-danger" *ngIf = "price.errors.required">this field is required</p>
+          </div>
+          <div class="form-groupsss">
+            <input type="text" name="description" id="description" class="form-control" placeholder="Enter description..." 
+            #description = "ngModel" ngModel required style="height: 75px">
+          </div>
+          <div *ngIf = "description.touched && description.invalid">
+            <p class="alert alert-danger" *ngIf = "description.errors.required">this field is required</p>
+         </div>
+         <div class="form-groupsss">
+          <input type="url" name="img" id="img" class="form-control" placeholder=" Image Url place here..." 
+          #image = "ngModel" ngModel required>
+        </div>
+        <div *ngIf = "image.touched && image.invalid">
+           <p class="alert alert-danger" *ngIf = "image.errors.required">this field is required</p>
+        </div>
+      <div class="form-groupsss">
+          <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">Add Product</button>
+      </div>
+    </form>
+    
+    
+    
+    
+    
+    
+    
