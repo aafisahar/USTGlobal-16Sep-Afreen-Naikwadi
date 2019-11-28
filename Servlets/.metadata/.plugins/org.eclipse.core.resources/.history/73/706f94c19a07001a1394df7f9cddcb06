@@ -1,0 +1,59 @@
+package com.ustglobal.empwebapp.dao;
+
+import java.sql.*;
+
+import com.ustglobal.empwebapp.dto.EmployeeInfo;
+
+public class EmployeeDAOJdbcImpl implements EmployeeDAO {
+
+	private static final String URL = "jdbc:mysql:/localhost:3306ust_ty_web_db?user=root&password=root";
+	private static final String DRIVER_CLASS_NAME = "com.mysql.jdbc.Driver";
+	
+	private static final String SELECT_SQL = "select * from employee_info where id=?";
+	private static final String INSERT_SQL = "insert into employee_info values(?,?,?,?)";
+	private static final String UPDATE_SQL = "update employee_info set password=? where id=?";
+	
+	@Override
+	public EmployeeInfo auth(int id, String password) {
+
+		EmployeeInfo info = searchEmployee(id);
+		if(info!=null) {
+			String pass = info.getPassword();
+			if(pass.equals(password)) {
+				return info;
+			} else {
+				return null;
+			}
+		}
+		return null;
+	}
+	
+	@Override
+	public EmployeeInfo searchEmployee(int id) {
+
+		try {
+			Class.forName(DRIVER_CLASS_NAME);
+			try(Connection con = DriverManager.getConnection(URL);
+				PreparedStatement pstmt = con.prepareStatement(SELECT_SQL);	) {
+				
+				pstmt.setInt(1, id);
+			}
+		}catch (Exception e) {
+
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	@Override
+	public boolean changePassword(int id, String password) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	@Override
+	public boolean registerEmployee(EmployeeInfo info) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+}

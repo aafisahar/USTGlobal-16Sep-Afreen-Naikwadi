@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<a href="./home">Home</a><a style="float:right" href="#">Logout</a>
+<feildset align="center">
+<legend>search</legend>
+	<form action="" method="post">
+		<table align="center">
+			<tr>
+				<td>Id:</td>
+				<td><input type="number" name="id"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="search"></td>
+			</tr>
+		</table>
+	</form>
+	</feildset>
+</body>
+</html>
